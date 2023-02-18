@@ -7,14 +7,19 @@
 <title>View all items</title>
 </head>
 <body>
-	<table>
-		<c:forEach items="${requestScope.allItems}" var="currentitem">
-			<tr>
-				<td><input type="radio" name="id" value="${currentitem.id}"></td>
-				<td>${currentitem.store}</td>
-				<td>${currentitem.item}</td>
-			</tr>
-		</c:forEach>
-	</table>
+	<form method="post" action="navigationServlet">
+		<table>
+			<c:forEach items="${requestScope.allItems}" var="currentitem">
+				<tr>
+					<td><input type="radio" name="id" value="${currentitem.id}"></td>
+					<td>${currentitem.store}</td>
+					<td>${currentitem.item}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		<input type="submit" value="edit" name="doThisToItem">
+		<input type="submit" value="delete" name="doThisToItem">
+		<input type="submit" value="add" name="doThisToItem">
+	</form>
 </body>
 </html>
