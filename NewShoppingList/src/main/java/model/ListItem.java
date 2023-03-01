@@ -22,7 +22,7 @@ public class ListItem {
 	private String store;
 	@Column(name="ITEM")
 	private String item;
-	
+
 	public ListItem() {
 		
 	}

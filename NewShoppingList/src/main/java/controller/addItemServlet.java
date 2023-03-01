@@ -34,6 +34,7 @@ public class addItemServlet extends HttpServlet {
 		ListItem li = new ListItem(store, item);
 		ListItemHelper dao = new ListItemHelper();
 		dao.insertItem(li);
+		
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 	}
 
